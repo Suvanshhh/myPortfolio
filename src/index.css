@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: font1;
+  src: url('./assets/font1.woff2');
+}
+
+@font-face{
+  font-family: font2;
+  src: url('./assets/font2.woff2');
+}
+
+@font-face{
+  font-family: font3;
+  src: url('./assets/font3.woff2');
+}
+
+@font-face{
+  font-family: font4;
+  src: url('./assets/font4.woff2');
+}
+
+@font-face{
+  font-family: font5;
+  src: url('./assets/font5.woff2');
+}
+
+@font-face{
+  font-family: font6;
+  src: url('./assets/font6.woff2');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+  color: #fff;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  background-color: #111;
+}
+
+#section2{
+  position: relative;
+  perspective: 2000px;
+}
+
+.rotateText{
+  transform-origin: 100% 70%;
+}
+
+
+/* #page1-in{
+  position: relative;
+  perspective: 1000px;
+}
+
+
+
+#tiltDiv{
+  background-color: red;
+  width: fit-content;
+  transform: rotateY(50deg) rotateY('angle');
+} */
