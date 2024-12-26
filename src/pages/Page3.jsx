@@ -1,4 +1,5 @@
 import React from "react";
+import projectVideo from "/src/assets/CureIt-Draft1 - Made with Clipchamp.mp4"
 
 const Page3 = () => {
   return (
@@ -21,7 +22,7 @@ const Page3 = () => {
           muted
           autoPlay
           className="relative h-[66vh] mb-[5vh] rounded-lg w-[65vw] object-cover"
-          src="/src/assets/CureIt-Draft1 - Made with Clipchamp.mp4"
+          src={projectVideo}
           alt="CureIt Demo"
         ></video>
       </a>

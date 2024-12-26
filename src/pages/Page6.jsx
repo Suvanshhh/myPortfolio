@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
 import su2 from "/src/assets/su2.jpg"; // Import the image
+import bgVideo2 from "/src/assets/bg2.mp4"
 
 const Page6 = () => {
   const navigate = useNavigate(); // Initialize the navigate function
@@ -17,7 +18,7 @@ const Page6 = () => {
           muted
           autoPlay="true"
           className="h-full w-full object-cover"
-          src="/src/assets/bg2.mp4"
+          src= {bgVideo2}
         ></video>
 
         <h1 className="font-[font5] text-[20vw] flex flex-row items-center absolute uppercase left-32 bottom-2 space-x-4">

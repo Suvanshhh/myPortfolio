@@ -48,7 +48,7 @@ const Header = () => {
 
       {/* Hamburger icon */}
       <i
-        className="ri-menu-2-line text-4xl text-black cursor-pointer ml-1.5"
+        className="ri-menu-2-line text-4xl text-white cursor-pointer ml-1.5"
         onClick={toggleMenu}
       ></i>
 

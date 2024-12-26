@@ -7,19 +7,18 @@ const HireMe = () => {
     message: "",
   });
 
-  // Handle form input changes
+  // Handle form input changes (unchanged)
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value, // Dynamically updates the corresponding field
+      [name]: value,
     });
   };
 
-  // Handle form submission
+  // Handle form submission (unchanged)
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logging the form data, you can replace this with an actual API call
     console.log("Form Submitted", formData);
     alert("Form Submitted Successfully");
 
@@ -29,16 +28,19 @@ const HireMe = () => {
 
   return (
     <div className="h-screen flex flex-col justify-center items-center p-16">
-      <h1 className="text-2xl text-white mb-16">Contact / Hire Me</h1>
+      <h1 className="text-2xl text-white mb-16 text-center">Contact / Hire Me</h1>
 
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg p-16 m-10  bg-white shadow-lg rounded-lg"
+        className="w-full max-w-lg p-8 m-10 bg-white shadow-lg rounded-lg flex flex-col space-y-4"
       >
         {/* Name Field */}
-        <div className="mb-4">
-            <h1 className="text-black text-3xl mb-8 font-[font6]"> Contact me:</h1>
-          <label className="block text-lg font-[font4] font-medium text-black mb-2" htmlFor="name">
+        <div className="flex flex-col">
+          <h1 className="text-black text-3xl mb-2 font-[font6]">Contact me:</h1>
+          <label
+            className="block text-lg font-[font4] font-medium text-black mb-2"
+            htmlFor="name"
+          >
             Name
           </label>
           <input
@@ -46,7 +48,7 @@ const HireMe = () => {
             id="name"
             placeholder="Name"
             name="name"
-            value={formData.name}  // Ensures form is controlled
+            value={formData.name} // Ensures form is controlled
             onChange={handleChange} // Updates state when typing
             className="w-full p-4 border text-black border-gray-300 rounded-lg"
             required
@@ -54,8 +56,11 @@ const HireMe = () => {
         </div>
 
         {/* Email Field */}
-        <div className="mb-4">
-          <label className="block text-lg font-[font4] text-black font-medium mb-2" htmlFor="email">
+        <div className="flex flex-col">
+          <label
+            className="block text-lg font-[font4] text-black font-medium mb-2"
+            htmlFor="email"
+          >
             Email
           </label>
           <input
@@ -63,7 +68,7 @@ const HireMe = () => {
             id="email"
             placeholder="Email"
             name="email"
-            value={formData.email}  // Ensures form is controlled
+            value={formData.email} // Ensures form is controlled
             onChange={handleChange} // Updates state when typing
             className="w-full p-4 border border-gray-300 text-black rounded-lg"
             required
@@ -71,20 +76,23 @@ const HireMe = () => {
         </div>
 
         {/* Message Field */}
-        <div className="mb-4">
-          <label className="block font-[font4] text-black text-lg font-medium mb-2" htmlFor="message">
+        <div className="flex flex-col">
+          <label
+            className="block font-[font4] text-black text-lg font-medium mb-2"
+            htmlFor="message"
+          >
             Message
           </label>
           <textarea
             id="message"
             name="message"
             placeholder="Message"
-            value={formData.message}  // Ensures form is controlled
+            value={formData.message} // Ensures form is controlled
             onChange={handleChange} // Updates state when typing
             className="w-full p-4 border text-black border-gray-300 rounded-lg"
             rows="4"
             required
-          ></textarea>
+          />
         </div>
 
         {/* Submit Button */}
@@ -95,8 +103,6 @@ const HireMe = () => {
           Submit
         </button>
       </form>
-
-     
     </div>
   );
 };

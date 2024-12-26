@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
 import Page1Bottom from "../components/Page1Bottom";
+import bg3 from "/src/assets/new background_fn_vertical.avif"
 
 const Page8 = () => {
   const navigate = useNavigate(); // Initialize the navigate function
@@ -15,7 +16,7 @@ const Page8 = () => {
       <div className="h-full overflow-hidden w-full bg-black rounded-[30px]">
         <img
           className="h-full w-full object-cover"
-          src="/src/assets/new background_fn_vertical.avif"
+          src= {bg3}
           alt="Background"
         />
 

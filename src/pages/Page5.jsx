@@ -1,4 +1,5 @@
 import React from 'react'
+import rocket from "/src/assets/rocket.jpg"
 
 const Page5 = () => {
   return (
@@ -6,7 +7,7 @@ const Page5 = () => {
       <div className="h-full overflow-hidden w-[60%] bg-black rounded-[50px]">
         <img
           className="h-full w-full object-fit"
-          src="/src/assets/rocket.jpg"
+          src= {rocket}
           alt="Rocket"
         />
       </div>

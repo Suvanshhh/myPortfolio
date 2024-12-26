@@ -1,4 +1,5 @@
 import React from "react";
+import bgVideo from "/src/assets/moon.mp4"
 
 const Page4 = () => {
   return (
@@ -9,7 +10,7 @@ const Page4 = () => {
           muted
           autoPlay="true"
           className="h-full w-full object-cover"
-          src="/src/assets/moon.mp4"
+          src={bgVideo}
         ></video>
         
         <div className="absolute left-32 bottom-2 flex items-center space-x-4">
