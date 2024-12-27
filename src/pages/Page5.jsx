@@ -4,9 +4,9 @@ import rocket from "/src/assets/rocket.jpg"
 const Page5 = () => {
   return (
     <div className="h-screen p-10 bg-white relative">
-      <div className="h-full overflow-hidden w-[60%] bg-black rounded-[50px]">
+      <div className="h-full shadow-lg shadow-gray-700 overflow-hidden w-[60%] bg-black rounded-[50px]">
         <img
-          className="h-full w-full object-fit"
+          className="h-full  w-full object-fit"
           src= {rocket}
           alt="Rocket"
         />

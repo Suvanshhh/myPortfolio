@@ -13,7 +13,7 @@ const Page1 = () => {
     <div onMouseMove={(e)=>{
         mouseMoving(e)
     }} className='h-screen p-3 pb-10 bg-white'>
-        <div className=' shadow-xl p-12 shadow-gray-700 h-full bg-cover w-full rounded-[30px] bg-[url(https://i.postimg.cc/PxBbZv7L/ANZO.jpg)]'>
+        <div className=' shadow-lg p-12  shadow-gray-700 h-full bg-cover w-full rounded-[30px] bg-[url(https://i.postimg.cc/PxBbZv7L/ANZO.jpg)]'>
           <img className=' pl-5 h-16 ' src='https://i.postimg.cc/yYnwK1Jq/Frame-53.png'/>
           <TiltText/>
           <Page1Bottom/>

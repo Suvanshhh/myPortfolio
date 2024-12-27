@@ -27,7 +27,7 @@ const Page2 = () => {
   return (
     <div id="section2" className="bg-white text-center p-0 text-black">
       <h3 className="text-gray-500 text-xl pb-10 font-[font2]">
-        © anzo.studio 2024 | designed and developed
+        © suvanshhh | designed and developed
       </h3>
 
       <div className="rotateText bg-white">

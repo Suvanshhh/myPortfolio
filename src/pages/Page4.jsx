@@ -4,12 +4,12 @@ import bgVideo from "/src/assets/moon.mp4"
 const Page4 = () => {
   return (
     <div className="h-screen relative p-10 bg-white">
-      <div className="h-full overflow-hidden w-full bg-black rounded-[50px]">
+      <div className="h-full shadow-lg shadow-gray-700 overflow-hidden  w-full bg-black rounded-[50px]">
         <video
           loop
           muted
           autoPlay="true"
-          className="h-full w-full object-cover"
+          className="h-full  w-full object-cover"
           src={bgVideo}
         ></video>
         

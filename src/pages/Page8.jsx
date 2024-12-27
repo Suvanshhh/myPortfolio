@@ -13,7 +13,7 @@ const Page8 = () => {
 
   return (
     <div className="h-screen relative pt-10 pb-5 pr-5 pl-5 bg-white">
-      <div className="h-full overflow-hidden w-full bg-black rounded-[30px]">
+      <div className="h-full shadow-lg shadow-gray-700 overflow-hidden w-full bg-black rounded-[30px]">
         <img
           className="h-full w-full object-cover"
           src= {bg3}

@@ -3,7 +3,7 @@ import projectVideo from "/src/assets/CureIt-Draft1 - Made with Clipchamp.mp4"
 
 const Page3 = () => {
   return (
-    <div className="pt-[50px] relative flex items-center justify-center h-screen bg-white">
+    <div className="pt-[50px] shadow-lg shadow-gray-700 relative flex items-center justify-center h-screen bg-white">
       {/* Laptop frame */}
       <img
         className="h-[80vh] w-[85vw] absolute items-center"

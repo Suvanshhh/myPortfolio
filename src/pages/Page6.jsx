@@ -12,7 +12,7 @@ const Page6 = () => {
 
   return (
     <div className="h-screen relative p-10 bg-white" onClick={handleClick}>
-      <div className="h-full overflow-hidden w-full bg-black rounded-[50px]">
+      <div className="h-full shadow-lg shadow-gray-700 overflow-hidden w-full bg-black rounded-[50px]">
         <video
           loop
           muted
