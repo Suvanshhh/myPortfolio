@@ -31,50 +31,53 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="fixed flex items-center justify-end w-full z-10 px-20 py-14">
+    <div className="fixed flex items-center justify-end w-full z-10 px-4 sm:px-8 md:px-20 py-8 md:py-14">
       {!isHireMeRoute && (
         <Link to="/hireme">
-          <button className="bg-black border-4 shadow-lg text-[1.5vw] font-[font4] p-12 shadow-black-700 text-xl px-8 py-2 hover:bg-gray-500 rounded-full">
+          <button className="bg-black border-2 md:border-4 shadow-lg text-sm md:text-[1.5vw] font-[font4] px-4 md:px-8 py-1 md:py-2 hover:bg-gray-500 rounded-full">
             Hire me
           </button>
         </Link>
       )}
 
       <i
-        className="ri-menu-2-line text-4xl text-white cursor-pointer ml-1.5"
+        className="ri-menu-2-line text-2xl md:text-4xl pr-6 text-white cursor-pointer ml-1.5"
         onClick={toggleMenu}
       ></i>
 
       {isMenuOpen && (
         <div
           ref={menuRef}
-          className="absolute top-16 right-5 bg-white border-2 rounded-lg shadow-lg w-40 z-20"
+          className="absolute top-12 md:top-16 right-2 md:right-5 bg-white border-2 rounded-lg shadow-lg w-[180px] md:w-[200px] z-20"
         >
-          <ul className="space-y-4 p-4 text-lg">
+          <ul className="space-y-3 md:space-y-4 p-3 md:p-4 text-base md:text-lg">
             <li className="text-black">
               <Link to="/aboutme" onClick={closeMenu}>
                 About Me
               </Link>
             </li>
             <li className="text-black">
-              <Link to="https://github.com/Suvanshhh" onClick={closeMenu}>
+              <a href="https://github.com/Suvanshhh" onClick={closeMenu}>
                 Projects
-              </Link>
+              </a>
             </li>
             <li className="text-black">
-              <Link to="https://www.linkedin.com/in/suvanshhh/" onClick={closeMenu}>
+              <a href="https://www.linkedin.com/in/suvanshhh/" onClick={closeMenu}>
                 LinkedIn
-              </Link>
+              </a>
             </li>
             <li className="text-black">
-              <Link to="https://linktr.ee/suvan.shh" onClick={closeMenu}>
+              <a href="https://linktr.ee/suvan.shh" onClick={closeMenu}>
                 LinkTree
-              </Link>
+              </a>
             </li>
             <li className="text-black">
-              <Link to="https://drive.google.com/drive/folders/1dRawxD4c7vXidAm5pxqylqcUwDKdonbS?usp=drive_link" onClick={closeMenu}>
+              <a
+                href="https://drive.google.com/drive/folders/1dRawxD4c7vXidAm5pxqylqcUwDKdonbS?usp=drive_link"
+                onClick={closeMenu}
+              >
                 Resume/CV
-              </Link>
+              </a>
             </li>
             <li className="text-black">
               <Link to="/hireme" onClick={closeMenu}>

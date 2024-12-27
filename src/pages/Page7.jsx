@@ -1,16 +1,14 @@
 import React from "react";
-import parallaxImage from "/src/assets/astronaut.avif"; // Import your astronaut image
-import subtractImage from "/src/assets/Subtract.avif"; // Import your subtract image
+import parallaxImage from "/src/assets/astronaut.avif";
+import subtractImage from "/src/assets/Subtract.avif";
 
 const Page7 = () => {
-  // Handle click on the subtract image to redirect
   const handleClick = () => {
-    window.location.href = "https://linktr.ee/suvan.shh"; // Redirect to the external link
+    window.location.href = "https://linktr.ee/suvan.shh";
   };
 
   return (
-    <div className="h-screen pt-20 overflow-hidden bg-white relative">
-      {/* Parallax Background */}
+    <div className="h-screen pt-8 sm:pt-12 md:pt-20 overflow-hidden bg-white relative">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -19,16 +17,14 @@ const Page7 = () => {
         }}
       ></div>
 
-      {/* Masked Image Section */}
       <div className="bg-white">
-        <div className="relative h-screen flex flex-col justify-center items-center text-center">
-          <h1 className="uppercase font-[font6] text-[20vw] leading-none text-transparent bg-clip-text">
-            {/* Overlay image with opacity, add onClick handler to the image */}
+        <div className="relative h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-8">
+          <h1 className="uppercase font-[font6] text-[15vw] sm:text-[18vw] md:text-[20vw] leading-none text-transparent bg-clip-text">
             <img
               src={subtractImage}
               alt="Subtract Image"
-              className="w-full h-full object-cover opacity-100 cursor-pointer"
-              onClick={handleClick} // Add onClick to trigger redirect
+              className="w-full h-full object-cover opacity-100 cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={handleClick}
             />
           </h1>
         </div>

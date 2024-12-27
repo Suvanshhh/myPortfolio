@@ -4,64 +4,43 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
 const Page2 = () => {
-  // Register the ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
 
-  // Use `useGSAP` to initialize animations
   useGSAP(() => {
     gsap.from(".rotateText", {
-      rotateX: -80, // Rotate the text along the X-axis
-      opacity: 0, // Start with 0 opacity
-      duration: 1, // Animation duration
-      stagger: 1, // Time gap between each element's animation
+      rotateX: -80,
+      opacity: 0,
+      duration: 1,
+      stagger: 1,
       scrollTrigger: {
-        trigger: ".rotateText", // Trigger animation when `.rotateText` enters the viewport
-        markers: false, // Enable debug markers
-        start: "top 60%", // Animation starts when top of `.rotateText` reaches 75% of the viewport
-        end: "top -100%", // Animation ends when bottom of `.rotateText` reaches 25% of the viewport
-        scrub: 2, // Smooth scrolling effect
+        trigger: ".rotateText",
+        markers: false,
+        start: "top 60%",
+        end: "top -100%",
+        scrub: 2,
       },
     });
   });
 
   return (
     <div id="section2" className="bg-white text-center p-0 text-black">
-      <h3 className="text-gray-500 text-xl pb-10 font-[font2]">
-        © suvanshhh | designed and developed
+      <h3 className="text-gray-500 text-base md:text-xl pb-6 md:pb-10 font-[font2]">
+        © designed and developed | by Suvansh 
       </h3>
 
-      <div className="rotateText bg-white">
-        <h1 className="text-[40vw] text-black font-[font5] uppercase pt-0 leading-[33vw]">
-          IMPACTFUL
-        </h1>
-      </div>
-      <div className="rotateText bg-white">
-        <h1 className="text-[40vw] text-black font-[font5] uppercase leading-[30vw]">
-          Design
-        </h1>
-      </div>
-      <div className="rotateText bg-white">
-        <h1 className="text-[40vw] text-black font-[font5] uppercase leading-[33vw]">
-          Is the
-        </h1>
-      </div>
-      <div className="rotateText bg-white">
-        <h1 className="text-[40vw] text-black font-[font5] uppercase leading-[30vw]">
-          Design
-        </h1>
-      </div>
-      <div className="rotateText bg-white">
-        <h1 className="text-[40vw] text-black font-[font5] uppercase leading-[33vw]">
-          that
-        </h1>
-      </div>
-      <div className="rotateText relative bg-white">
-        
-        <h1 className="text-[40vw] text-black font-[font5] pb-10 uppercase leading-[30vw]">
-          works
-        </h1>
-      </div>
-
+      {["IMPACTFUL", "Design", "Is the", "Design", "that", "works"].map((text, index) => (
+        <div key={index} className="rotateText bg-white">
+          <h1 className={`text-[15vw] md:text-[40vw] text-black font-[font5] uppercase ${
+            index === 0 ? "pt-0" : ""
+          } ${
+            index === 5 ? "pb-6 md:pb-10" : ""
+          } leading-[15vw] md:leading-[33vw] ${
+            index % 2 === 1 ? "md:leading-[30vw]" : "md:leading-[33vw]"
+          }`}>
+            {text}
+          </h1>
+        </div>
+      ))}
     </div>
   );
 };

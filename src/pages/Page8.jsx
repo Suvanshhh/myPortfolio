@@ -1,44 +1,40 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for routing
+import { useNavigate } from "react-router-dom";
 import Page1Bottom from "../components/Page1Bottom";
-import bg3 from "/src/assets/new background_fn_vertical.avif"
+import bg3 from "/src/assets/new background_fn_vertical.avif";
 
 const Page8 = () => {
-  const navigate = useNavigate(); // Initialize the navigate function
-
-  // Handle the redirection when the arrow icon is clicked
-  const handleRedirect = () => {
-    navigate("/hireme"); // Use navigate to redirect to /hireme route
-  };
+  const navigate = useNavigate();
+  const handleRedirect = () => navigate("/hireme");
 
   return (
-    <div className="h-screen relative pt-10 pb-5 pr-5 pl-5 bg-white">
-      <div className="h-full shadow-lg shadow-gray-700 overflow-hidden w-full bg-black rounded-[30px]">
+    <div className="h-screen relative p-3 sm:p-4 md:p-10 bg-white">
+      <div className="h-full shadow-lg shadow-gray-700 overflow-hidden w-full bg-black rounded-[15px] sm:rounded-[20px] md:rounded-[30px]">
         <img
           className="h-full w-full object-cover"
-          src= {bg3}
+          src={bg3}
           alt="Background"
         />
 
-        <div className="absolute bottom-10 left-10 right-10 flex flex-col items-start space-y-4 p-16 mt-20 bg-opacity-0 bg-black rounded-[20px]">
-          <h1 className="font-[font5] text-white text-[20vw] md:text-[8vw] leading-tight text-center">
+        <div className="absolute bottom-40 xxs:bottom-72 xs:pl-16 xs:bottom-44 md:bottom-24 lg:bottom-24 xl:bottom-24 2xl:bottom-24 sm:bottom-76 lg: bottom-10 md:bottom-10 left-4 sm:left-6 md:left-10 right-4 sm:right-6 md:right-10 flex flex-col items-start space-y-1 sm:space-y-3 md:space-y-4 p-4 sm:p-8 md:pb-32 bg-opacity-0 bg-black rounded-[10px] sm:rounded-[15px] md:rounded-[20px]">
+          <h1 className="font-[font5] text-white text-[18vw] sm:text-[22vw] md:text-[10vw] leading-3 text-left pl-2 sm:pl-4 md:pl-8">
             GOT
           </h1>
-          <h1 className="font-[font5] text-white text-[20vw] md:text-[8vw] leading-3 text-center">
+          <h1 className="font-[font5] text-white text-[18vw] sm:text-[22vw] md:text-[10vw] leading-12 text-left pl-2 sm:pl-4 md:pl-8">
             AN
           </h1>
-          <h1 className="font-[font5] text-white text-[20vw] md:text-[8vw] leading-tight text-center">
+          <h1 className="font-[font5] text-gray-400 text-[18vw] sm:text-[22vw] md:text-[10vw] leading-8 text-left pl-2 sm:pl-4 md:pl-8">
             IDEA
           </h1>
 
-          {/* Redirect icon */}
-          <i
-            className="ri-arrow-right-circle-fill text-6xl text-white bg-transparent hover:text-yellow-500 transition-colors cursor-pointer"
-            onClick={handleRedirect} // Trigger the redirection on click
-          ></i>
+          
         </div>
+        <i
+            className="ri-arrow-right-circle-fill text-4xl sm:text-5xl md:text-7xl text-white bg-transparent hover:text-yellow-500 transition-colors cursor-pointer"
+            onClick={handleRedirect}
+          ></i>
 
-        <div className="p-10">
+        <div className="p-4 sm:p-6 md:p-10">
           <Page1Bottom />
         </div>
       </div>
